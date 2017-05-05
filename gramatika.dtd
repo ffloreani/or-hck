@@ -1,0 +1,36 @@
+<!ELEMENT drustva (drustvo*)>
+
+<!ELEMENT drustvo (naziv, ravnatelj, telefon+, adresa, e-mail?, web?, radno-vrijeme, aktivnosti, fb-id)>
+<!ATTLIST drustvo vrsta (opcinsko|gradsko|zupanijsko) #REQUIRED>
+
+<!ELEMENT naziv (#PCDATA)>
+<!ELEMENT ravnatelj (#PCDATA)>
+
+<!ELEMENT telefon (broj+)>
+<!ATTLIST telefon tip (mobilni|fiksni|telefax) #REQUIRED>
+
+<!ELEMENT broj (#PCDATA)>
+<!ATTLIST broj pozivni-broj (091|092|095|097|098|099|01|020|021|022|023|031|032|033|034|035|040|042|043|044|047|048|049|051|052|053) #REQUIRED>
+
+<!ELEMENT adresa (ulica, kucni-broj, mjesto)>
+<!ELEMENT ulica (#PCDATA)>
+<!ELEMENT kucni-broj (#PCDATA)>
+
+<!ELEMENT mjesto (#PCDATA)>
+<!ATTLIST mjesto post-broj CDATA #REQUIRED>
+
+<!ELEMENT e-mail (#PCDATA)>
+<!ELEMENT web (#PCDATA)>
+
+<!ELEMENT radno-vrijeme ((radni-dan, subota) | (subota, radni-dan) | (radni-dan))>
+<!ELEMENT radni-dan (#PCDATA)>
+<!ELEMENT subota (#PCDATA)>
+<!ATTLIST radni-dan od (07|08|09|10|11|12) #REQUIRED>
+<!ATTLIST radni-dan do (11|12|13|14|15|16|17|18|19|20) #REQUIRED>
+<!ATTLIST subota od (07|08|09|10|11|12) #REQUIRED>
+<!ATTLIST subota do (10|11|12|13|14|15|16) #REQUIRED>
+
+<!ELEMENT aktivnosti (aktivnost+)>
+<!ELEMENT aktivnost (#PCDATA)>
+
+<!ELEMENT fb-id (#PCDATA)>

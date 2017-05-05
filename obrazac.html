@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Novi obrazac</title>
+  	<link rel="stylesheet" href="dizajn.css" type="text/css">
+  	<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+  	<script src="https://use.fontawesome.com/3b6cd20c64.js"></script>
+  </head>
+  <body>
+  	<div id="wrapper">
+      <header class="masthead">
+        <div class="logo">
+          <a href="index.html"><img src="res/hck_logo.gif" /></a>
+        </div>
+        <span class="masthead-search">
+          <a href="obrazac.html"><i class="fa fa-search fa-2x fa-flip-horizontal"></i></a>
+        </span>
+      </header>
+	  	
+      <nav class="sidebar">
+        <ul class="side">
+          <li><a href="index.html"><i class="fa fa-home fa-fw"></i>&nbsp;POČETNA</a></li>
+          <li><a href="obrazac.html"><i class="fa fa-search fa-fw"></i>&nbsp;PRETRAGA</a></li>
+          <li><a href="podaci.xml"><i class="fa fa-table fa-fw"></i>&nbsp;PODACI</a></li>
+		  <li><a href="http://www.hck.hr/hr" target="_blank"><i class="fa fa-plus fa-fw"></i>&nbsp;HCK WEB</a></li>
+          <li><a href="http://www.fer.unizg.hr/predmet/or"><i class="fa fa-desktop fa-fw"></i>&nbsp;OR @ FER</a></li>
+          <li><a href="http://www.fer.unizg.hr" target="_blank"><i class="fa fa-university fa-fw"></i>&nbsp;FER UNIZG</a></li>
+          <li><a href="mailto:filip.floreani@fer.hr"><i class="fa fa-envelope fa-fw"></i>&nbsp;E-MAIL</a></li>
+        </ul>
+      </nav>
+
+      <div class="main">
+        <div class="form-container">
+            <h1 class="headline">Obrazac za pretragu</h1>
+            <table class="form-table">
+              <tr>
+                <td class="desc">Vrsta društva</td>
+                <td>
+                  <input type="checkbox" name="city-county"> Gradsko/Općinsko
+                  <input type="checkbox" name="state"> Županijsko
+                  <input type="checkbox" name="national"> Nacionalno
+                </td>
+              </tr>
+              <tr>
+                <td class="desc">Ravnatelj/ica</td>
+                <td>
+                  <input type="text" name="director">
+                </td>
+              </tr>
+              <tr>
+                <td class="desc">OIB</td>
+                <td>
+                  <input type="text" name="oib" maxlength="11">
+                </td>
+              </tr>
+              <tr>
+                <td class="desc">Mjesto</td>
+                <td>
+                  <input type="text" name="town">
+                </td>
+              </tr>
+              <tr>
+                <td class="desc">Aktivnosti</td>
+                <td>
+                  <select multiple>
+                    <option value="tracing">Služba traženja</option>
+                    <option value="first-aid">Prva pomoć</option>
+                    <option value="addiction">Prevencija ovisnosti</option>
+                    <option value="lifeguards">Spašavanje života na vodi</option>
+                    <option value="eru">Interventni tim</option>
+                    <option value="std">Prevencija spolno prenosivih bolesti</option>
+                    <option value="assistance">Pomoć u kući</option>
+                    <option value="youth">Klub mladih</option>
+                    <option value="blood-drive">Dobrovoljno davalaštvo krvi</option>
+                    <option value="trafficking">Prevencija trgovanja ljudima</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="desc">Tip telefona</td>
+                <td>
+                  <input type="radio" name="phone-type"> Fiksni
+                  <input type="radio" name="phone-type"> Mobilni
+                  <input type="radio" name="phone-type"> Telefax
+                </td>
+              </tr>
+              <tr>
+                <td class="desc">Broj telefona</td>
+                <td>
+                    <input type="tel" name="phone-number" placeholder="+385">
+                </td>
+              </tr>
+            </table>
+
+          <div class="form-buttons">
+            <button class="btn-submit" type="submit">Pretraži</button>
+            <button class="btn-reset" type="reset">Odustani</button>
+          </div>
+        </div>
+      </div>
+	</div>
+	 
+	<footer class="main-footer" style="position: fixed; bottom:0; right:0; left:0;">
+		<p>&copy; Filip Floreani (Otvoreno računarstvo) 2017.</p>
+	</footer>
+  </body>
+</html>

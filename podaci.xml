@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE drustva SYSTEM "gramatika.dtd">
+
+<?xml-stylesheet type="text/xsl" href="pretvorba.xsl"?>
+
+<drustva>
+	<drustvo vrsta="opcinsko">
+		<naziv>Općinsko društvo Crvenog križa Darda</naziv>
+		<ravnatelj>Ivan Hodak</ravnatelj>
+		<telefon tip="fiksni">
+			<broj pozivni-broj="031">740 750</broj>
+		</telefon>
+		<telefon tip="telefax">
+			<broj pozivni-broj="031">740 750</broj>
+		</telefon>
+		<adresa>
+			<ulica>Sv. Ivana Krstitelja</ulica>
+			<kucni-broj>116a</kucni-broj>
+			<mjesto post-broj="31326">Darda</mjesto>
+		</adresa>
+		<e-mail>kontakt@hck-darda.hr</e-mail>
+		<web>http://www.hck-darda.hr</web>
+		<radno-vrijeme>
+			<radni-dan od="08" do="16"/>
+			<subota od="08" do="13" />
+		</radno-vrijeme>
+		<aktivnosti>
+			<aktivnost>Dobrovoljno darivanje krvi</aktivnost>
+			<aktivnost>Prva pomoć</aktivnost>
+		</aktivnosti>
+		<fb-id>212063432222230</fb-id>
+	</drustvo>
+
+	<drustvo vrsta="gradsko">
+		<naziv>Gradsko društvo Crvenog kriza Osijek</naziv>
+		<ravnatelj>Denis Ćosić</ravnatelj>
+		<telefon tip="fiksni">
+			<broj pozivni-broj="031">205 488</broj>
+		</telefon>
+		<telefon tip="telefax">
+			<broj pozivni-broj="031">211 765</broj>
+		</telefon>
+		<adresa>
+			<ulica>Šetalište Petra Preradovića</ulica>
+			<kucni-broj>6</kucni-broj>
+			<mjesto post-broj="31000">Osijek</mjesto>
+		</adresa>
+		<e-mail>crvenikrizosijek@crvenikrizosijek.hr</e-mail>
+		<web>http://www.crvenikrizosijek.hr</web>
+		<radno-vrijeme>
+			<radni-dan od="08" do="15"/>
+			<subota od="08" do="13"/>
+		</radno-vrijeme>
+		<aktivnosti>
+			<aktivnost>Prva pomoć</aktivnost>
+			<aktivnost>Služba traženja</aktivnost>
+			<aktivnost>Djelovanje u katastrofama</aktivnost>
+			<aktivnost>Dobrovoljno darivanje krvi</aktivnost>
+			<aktivnost>Pučka kuhinja</aktivnost>
+			<aktivnost>Služba spašavanja života na vodi i ekološke zaštite priobalja</aktivnost>
+			<aktivnost>Klub mladih</aktivnost>
+			<aktivnost>Prevencija trgovanja ljudima</aktivnost>
+			<aktivnost>Prevencija bolesti ovisnosti</aktivnost>
+			<aktivnost>Prevencija spolno prenosivih bolesti</aktivnost>
+			<aktivnost>Pomoć u kući</aktivnost>
+		</aktivnosti>
+		<fb-id>411280762363895</fb-id>
+	</drustvo>
+
+	<drustvo vrsta="opcinsko">
+		<naziv>Općinsko društvo Crvenog križa Vojnić</naziv>
+		<ravnatelj>Ljuba Martinović</ravnatelj>
+		<telefon tip="fiksni">
+			<broj pozivni-broj="047">883 010</broj>
+		</telefon>
+		<telefon tip="telefax">
+			<broj pozivni-broj="047">883 010</broj>
+		</telefon>
+		<adresa>
+			<ulica>Kralja P. Krešimira IV.</ulica>
+			<kucni-broj>18</kucni-broj>
+			<mjesto post-broj="47220">Vojnić</mjesto>
+		</adresa>
+		<e-mail>crveni-kriz-vojnic@ka.t-com.hr</e-mail>
+		<radno-vrijeme>
+			<radni-dan od="08" do="13"/>
+		</radno-vrijeme>
+		<aktivnosti>
+			<aktivnost>Dobrovoljno darivanje krvi</aktivnost>
+			<aktivnost>Prva pomoć</aktivnost>
+			<aktivnost>Pomoć u kući</aktivnost>
+		</aktivnosti>
+		<fb-id>1030164107065213</fb-id>
+	</drustvo>
+
+	<drustvo vrsta="gradsko">
+		<naziv>Gradsko društvo Crvenog križa Zagreb</naziv>
+		<ravnatelj>Petar Penava</ravnatelj>
+		<telefon tip="fiksni">
+			<broj pozivni-broj="01">3778 236</broj>
+		</telefon>
+		<telefon tip="telefax">
+			<broj pozivni-broj="01">3770 681</broj>
+		</telefon>
+		<adresa>
+			<ulica>Ilica</ulica>
+			<kucni-broj>223</kucni-broj>
+			<mjesto post-broj="10000">Zagreb</mjesto>
+		</adresa>
+		<e-mail>info@ckzg.hr</e-mail>
+		<web>http://www.ckzg.hr</web>
+		<radno-vrijeme>
+			<radni-dan od="07" do="17"/>
+			<subota od="08" do="13" />
+		</radno-vrijeme>
+		<aktivnosti>
+			<aktivnost>Dobrovoljno darivanje krvi</aktivnost>
+			<aktivnost>Socijalni dućan</aktivnost>
+			<aktivnost>Prva pomoć</aktivnost>
+			<aktivnost>Zdravstveni programi i savjetovališta</aktivnost>
+			<aktivnost>Klub mladih</aktivnost>
+			<aktivnost>Služba traženja</aktivnost>
+			<aktivnost>Djelovanje u katastrofama</aktivnost>
+			<aktivnost>Interventni tim</aktivnost>
+			<aktivnost>Pomoć u kući</aktivnost>
+			<aktivnost>Prevencija trgovanja ljudima</aktivnost>
+			<aktivnost>Prevencija bolesti ovisnosti</aktivnost>
+			<aktivnost>Prevencija spolno prenosivih bolesti</aktivnost>
+			<aktivnost>Služba spašavanja života na vodi i ekološke zaštite priobalja</aktivnost>
+		</aktivnosti>
+		<fb-id>211247559299296</fb-id>
+	</drustvo>
+
+	<drustvo vrsta="zupanijsko">
+		<naziv>Društvo Crvenog križa Istarske županije</naziv>
+		<ravnatelj>Elza Damijanić</ravnatelj>
+		<telefon tip="fiksni">
+			<broj pozivni-broj="052">624 579</broj>
+		</telefon>
+		<telefon tip="fiksni">
+			<broj pozivni-broj="052">616 768</broj>
+		</telefon>
+		<adresa>
+			<ulica>Narodnog doma</ulica>
+			<kucni-broj>2</kucni-broj>
+			<mjesto post-broj="52000">Pazin</mjesto>
+		</adresa>
+		<e-mail>hck.istra@gmail.com</e-mail>
+		<radno-vrijeme>
+			<radni-dan od="08" do="14"/>
+		</radno-vrijeme>
+		<aktivnosti>
+			<aktivnost>Interventni tim</aktivnost>
+			<aktivnost>Služba traženja</aktivnost>
+		</aktivnosti>
+		<fb-id>545520178925532</fb-id>
+	</drustvo>
+</drustva>
