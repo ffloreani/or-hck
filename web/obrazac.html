@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <title>Novi obrazac</title>
-  	<link rel="stylesheet" href="dizajn.css" type="text/css">
-  	<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+  	<link rel="stylesheet" href="./dizajn.css" type="text/css">
+  	<link rel="shortcut icon" type="image/png" href="./favicon.ico"/>
   	<script src="https://use.fontawesome.com/3b6cd20c64.js"></script>
   </head>
   <body>
   	<div id="wrapper">
       <header class="masthead">
         <div class="logo">
-          <a href="index.html"><img src="res/hck_logo.gif" /></a>
+          <a href="index.html"><img src="./res/hck_logo.gif" /></a>
         </div>
         <span class="masthead-search">
           <a href="obrazac.html"><i class="fa fa-search fa-2x fa-flip-horizontal"></i></a>
@@ -38,21 +38,15 @@
                 <tr>
                   <td class="desc">Vrsta društva</td>
                   <td>
-                    <input type="checkbox" name="city-county"> Gradsko/Općinsko
-                    <input type="checkbox" name="state"> Županijsko
-                    <input type="checkbox" name="national"> Nacionalno
+                    <input type="checkbox" name="branch-type[]" id="city-county" value="city-county"> Gradsko/Općinsko
+                    <input type="checkbox" name="branch-type[]" id="state" value="state"> Županijsko
+                    <input type="checkbox" name="branch-type[]" id="national" value="national"> Nacionalno
                   </td>
                 </tr>
                 <tr>
                   <td class="desc">Ravnatelj/ica</td>
                   <td>
                     <input type="text" name="director">
-                  </td>
-                </tr>
-                <tr>
-                  <td class="desc">OIB</td>
-                  <td>
-                    <input type="text" name="oib" maxlength="11">
                   </td>
                 </tr>
                 <tr>
@@ -64,7 +58,7 @@
                 <tr>
                   <td class="desc">Aktivnosti</td>
                   <td>
-                    <select multiple>
+                    <select multiple name="activities[]">
                       <option value="tracing">Služba traženja</option>
                       <option value="first-aid">Prva pomoć</option>
                       <option value="addiction">Prevencija ovisnosti</option>
@@ -81,22 +75,22 @@
                 <tr>
                   <td class="desc">Tip telefona</td>
                   <td>
-                    <input type="radio" name="phone-type"> Fiksni
-                    <input type="radio" name="phone-type"> Mobilni
-                    <input type="radio" name="phone-type"> Telefax
+                    <input type="radio" name="phone-type" id="landline" value="0"> Fiksni
+                    <input type="radio" name="phone-type" id="cell" value="1"> Mobilni
+                    <input type="radio" name="phone-type" id="fax" value="2"> Telefax
                   </td>
                 </tr>
                 <tr>
                   <td class="desc">Broj telefona</td>
                   <td>
-                      <input type="tel" name="phone-number" placeholder="+385">
+                      <input type="tel" name="phone-number" value="+385">
                   </td>
                 </tr>
               </table>
 
               <div class="form-buttons">
                 <button class="btn-submit" type="submit">Pretraži</button>
-                <button class="btn-reset" type="reset">Odustani</button>
+                <button class="btn-reset" type="reset">Poništi</button>
               </div>
             </form>
         </div>

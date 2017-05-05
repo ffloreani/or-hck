@@ -1,24 +1,25 @@
 <?php
-  error_reporting( E_ALL );
-  require_once( "funkcije.php" );
+error_reporting( E_ALL );
 
-  print_r($_GET);
+require_once('funkcije.php'); 
 
-  $xmlDom = new DOMDocument();
-  $xmlDom->load( 'podaci.xml' );
+print_r($_GET);
 
-  $xPath = new DOMXPath($dom);
-  $xmlQuery = "/drustva/drustvo";
+$xmlDom = new DOMDocument();
+$xmlDom->load( 'podaci.xml' );
 
-  $filteredNodes = $xPath->query($xmlQuery);
+$xPath = new DOMXPath($xmlDom);
+$xmlQuery = "/drustva/drustvo";
+
+$filteredNodes = $xPath->query($xmlQuery);
 ?>
 
 <html lang="hr">
 <head>
     <meta charset="UTF-8"/>
     <title>HCK news feed</title>
-    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
-    <link rel="stylesheet" href="dizajn.css" type="text/css"/>
+    <link rel="shortcut icon" type="image/png" href="./favicon.ico"/>
+    <link rel="stylesheet" href="./dizajn.css" type="text/css"/>
     <script src="https://use.fontawesome.com/3b6cd20c64.js"></script>
 </head>
 <body>
@@ -64,24 +65,20 @@
                         <?php foreach($filteredNodes as $drustvo) { ?>
                             <tr>
                                 <td> <!-- Branch title -->
-                                    <?php echo getElement("naziv", $drustvo); ?>
+                                    <?php echo getElementValue("naziv", $drustvo); ?>
                                 </td>
                                 <td> <!-- Branch director -->
-                                    <?php echo getElement("ravnatelj", $drustvo); ?>
+                                    <?php echo getElementValue("ravnatelj", $drustvo); ?>
                                 </td>
                                 <td> <!-- Working hours -->
-                                    Radni dan: <?php echo getOpenHours(true, $drustvo); ?>
+                                    Radni dan: <?php echo getOpenHours(true, $drustvo); ?><br/>
                                     Subota: <?php echo getOpenHours(false, $drustvo); ?>
                                 </td>
                                 <td> <!-- Address -->
                                     <?php echo getAddress($drustvo); ?>
                                 </td>
                                 <td style="text-align:center;"> <!-- Web link -->
-                                    <?php if (containsElement("web", $drustvo) { ?>
-                                      <a class="links" href=<?php echo getElement("web", $drustvo); ?> target="_blank">
-                                          <span><i class="fa fa-lg fa-fw fa-external-link"></i></span>
-                                      </a>
-                                    <?php } ?>
+                                    
                                 </td>
                                 <td style="text-align:center;"> <!-- Facebook link -->
                                     <a class="links" href=<?php echo getFacebookLink($drustvo); ?> target="_blank">

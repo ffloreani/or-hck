@@ -8,15 +8,15 @@
 		<head>
 			<meta charset="UTF-8"/>
 			<title>HCK news feed</title>
-			<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
-			<link rel="stylesheet" href="dizajn.css" type="text/css"/>
+			<link rel="shortcut icon" type="image/png" href="./favicon.ico"/>
+			<link rel="stylesheet" href="./dizajn.css" type="text/css"/>
 			<script src="https://use.fontawesome.com/3b6cd20c64.js"></script>
 		</head>
 		<body>
 			<div id="wrapper">
 				<header class="masthead">
 					<div class="logo">
-						<a href="index.html"><img src="res/hck_logo.gif" alt="Logo HCK"/></a>
+						<a href="index.html"><img src="./res/hck_logo.gif" alt="Logo HCK"/></a>
 					</div>
 					<span class="masthead-search">
 						<a href="obrazac.html"><i class="fa fa-search fa-2x fa-flip-horizontal"></i></a>
