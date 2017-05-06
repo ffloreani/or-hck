@@ -4,14 +4,53 @@
 <?xml-stylesheet type="text/xsl" href="pretvorba.xsl"?>
 
 <drustva>
+    <drustvo vrsta="nacionalno">
+		<naziv>Hrvatski Crveni križ</naziv>
+		<ravnatelj>dr. Josip Jelić</ravnatelj>
+		<telefon tip="fiksni">
+			<broj pozivni-broj="01">4655814</broj>
+		</telefon>
+		<telefon tip="telefax">
+			<broj pozivni-broj="01">4655365</broj>
+		</telefon>
+		<adresa>
+			<ulica>Crvenog križa</ulica>
+			<kucni-broj>14</kucni-broj>
+			<mjesto post-broj="10000">Zagreb</mjesto>
+		</adresa>
+		<e-mail>redcross@hck.hr</e-mail>
+		<web>http://www.hck.hr/hr</web>
+		<radno-vrijeme>
+			<radni-dan od="08" do="16"/>
+		</radno-vrijeme>
+		<aktivnosti>
+			<aktivnost>Dobrovoljno darivanje krvi</aktivnost>
+			<aktivnost>Socijalni dućan</aktivnost>
+			<aktivnost>Prva pomoć</aktivnost>
+			<aktivnost>Zdravstveni programi i savjetovališta</aktivnost>
+			<aktivnost>Klub mladih</aktivnost>
+			<aktivnost>Služba traženja</aktivnost>
+			<aktivnost>Djelovanje u katastrofama</aktivnost>
+			<aktivnost>Interventni tim</aktivnost>
+			<aktivnost>Pomoć u kući</aktivnost>
+			<aktivnost>Prevencija trgovanja ljudima</aktivnost>
+			<aktivnost>Prevencija bolesti ovisnosti</aktivnost>
+			<aktivnost>Prevencija spolno prenosivih bolesti</aktivnost>
+			<aktivnost>Služba spašavanja života na vodi i ekološke zaštite priobalja</aktivnost>
+          	<aktivnost>Pučka kuhinja</aktivnost>
+		</aktivnosti>
+		<fb-id>212063432222230</fb-id>
+	</drustvo>
+  
+  
 	<drustvo vrsta="opcinsko">
 		<naziv>Općinsko društvo Crvenog križa Darda</naziv>
 		<ravnatelj>Ivan Hodak</ravnatelj>
 		<telefon tip="fiksni">
-			<broj pozivni-broj="031">740 750</broj>
+			<broj pozivni-broj="031">740750</broj>
 		</telefon>
 		<telefon tip="telefax">
-			<broj pozivni-broj="031">740 750</broj>
+			<broj pozivni-broj="031">740750</broj>
 		</telefon>
 		<adresa>
 			<ulica>Sv. Ivana Krstitelja</ulica>
@@ -35,10 +74,10 @@
 		<naziv>Gradsko društvo Crvenog kriza Osijek</naziv>
 		<ravnatelj>Denis Ćosić</ravnatelj>
 		<telefon tip="fiksni">
-			<broj pozivni-broj="031">205 488</broj>
+			<broj pozivni-broj="031">205488</broj>
 		</telefon>
 		<telefon tip="telefax">
-			<broj pozivni-broj="031">211 765</broj>
+			<broj pozivni-broj="031">211765</broj>
 		</telefon>
 		<adresa>
 			<ulica>Šetalište Petra Preradovića</ulica>
@@ -71,10 +110,10 @@
 		<naziv>Općinsko društvo Crvenog križa Vojnić</naziv>
 		<ravnatelj>Ljuba Martinović</ravnatelj>
 		<telefon tip="fiksni">
-			<broj pozivni-broj="047">883 010</broj>
+			<broj pozivni-broj="047">883010</broj>
 		</telefon>
 		<telefon tip="telefax">
-			<broj pozivni-broj="047">883 010</broj>
+			<broj pozivni-broj="047">883010</broj>
 		</telefon>
 		<adresa>
 			<ulica>Kralja P. Krešimira IV.</ulica>
@@ -97,10 +136,10 @@
 		<naziv>Gradsko društvo Crvenog križa Zagreb</naziv>
 		<ravnatelj>Petar Penava</ravnatelj>
 		<telefon tip="fiksni">
-			<broj pozivni-broj="01">3778 236</broj>
+			<broj pozivni-broj="01">3778236</broj>
 		</telefon>
 		<telefon tip="telefax">
-			<broj pozivni-broj="01">3770 681</broj>
+			<broj pozivni-broj="01">3770681</broj>
 		</telefon>
 		<adresa>
 			<ulica>Ilica</ulica>
@@ -135,10 +174,10 @@
 		<naziv>Društvo Crvenog križa Istarske županije</naziv>
 		<ravnatelj>Elza Damijanić</ravnatelj>
 		<telefon tip="fiksni">
-			<broj pozivni-broj="052">624 579</broj>
+			<broj pozivni-broj="052">624579</broj>
 		</telefon>
 		<telefon tip="fiksni">
-			<broj pozivni-broj="052">616 768</broj>
+			<broj pozivni-broj="052">616768</broj>
 		</telefon>
 		<adresa>
 			<ulica>Narodnog doma</ulica>
@@ -160,10 +199,10 @@
         <naziv>Gradsko društvo Crvenog križa Bjelovar</naziv>
         <ravnatelj>Ratimir Blažeković</ravnatelj>
         <telefon tip="fiksni">
-            <broj pozivni-broj="043">410 100</broj>
+            <broj pozivni-broj="043">410100</broj>
         </telefon>
         <telefon tip="telefax">
-            <broj pozivni-broj="043">244 806</broj>
+            <broj pozivni-broj="043">244806</broj>
         </telefon>
         <adresa>
             <ulica>Matice hrvatske</ulica>
@@ -187,10 +226,10 @@
 		<naziv>Društvo Crvenog križa Zagrebačke županije</naziv>
 		<ravnatelj>Andrea-Silvija Hotujec</ravnatelj>
 		<telefon tip="fiksni">
-			<broj pozivni-broj="01">3876 062</broj>
+			<broj pozivni-broj="01">3876062</broj>
 		</telefon>
 		<telefon tip="fiksni">
-			<broj pozivni-broj="01">3876 062</broj>
+			<broj pozivni-broj="01">3876062</broj>
 		</telefon>
 		<adresa>
 			<ulica>Vulinčeva</ulica>
@@ -214,10 +253,10 @@
 		<naziv>Gradsko društvo Crvenog križa Ivanić Grad</naziv>
 		<ravnatelj>Ivana Bajt</ravnatelj>
 		<telefon tip="fiksni">
-			<broj pozivni-broj="01">2883 001</broj>
+			<broj pozivni-broj="01">2883001</broj>
 		</telefon>
 		<telefon tip="telefax">
-			<broj pozivni-broj="01">2883 002</broj>
+			<broj pozivni-broj="01">2883002</broj>
 		</telefon>
 		<adresa>
 			<ulica>Vulinčeva</ulica>
@@ -251,10 +290,10 @@
 		<naziv>Društvo Crvenog križa Splitsko-dalmatinske županije</naziv>
 		<ravnatelj>Željko Grubišić</ravnatelj>
 		<telefon tip="fiksni">
-			<broj pozivni-broj="021">244 411</broj>
+			<broj pozivni-broj="021">244411</broj>
 		</telefon>
 		<telefon tip="fiksni">
-			<broj pozivni-broj="021">244 211</broj>
+			<broj pozivni-broj="021">244211</broj>
 		</telefon>
 		<adresa>
 			<ulica>Petra Krešimira IV.</ulica>
@@ -276,10 +315,10 @@
 		<naziv>Gradsko društvo Crvenog križa Dubrovnik</naziv>
 		<ravnatelj>Živko Šimunović</ravnatelj>
 		<telefon tip="fiksni">
-			<broj pozivni-broj="020">418 810</broj>
+			<broj pozivni-broj="020">418810</broj>
 		</telefon>
 		<telefon tip="telefax">
-			<broj pozivni-broj="020">418 811</broj>
+			<broj pozivni-broj="020">418811</broj>
 		</telefon>
 		<adresa>
 			<ulica>Obala pape Ivana Pavla II.</ulica>

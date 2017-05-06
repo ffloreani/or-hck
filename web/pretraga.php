@@ -3,13 +3,12 @@ error_reporting( E_ALL );
 
 require_once('funkcije.php'); 
 
-print_r($_GET);
-
 $xmlDom = new DOMDocument();
 $xmlDom->load( 'podaci.xml' );
 
 $xPath = new DOMXPath($xmlDom);
-$xmlQuery = "/drustva/drustvo";
+
+$xmlQuery = constructXPathFilter($_GET['branch-type'], $_GET['director'], $_GET['town'], $_GET['activities'], $_GET['phone-type'], $_GET['phone-number']);
 
 $filteredNodes = $xPath->query($xmlQuery);
 ?>
@@ -71,7 +70,7 @@ $filteredNodes = $xPath->query($xmlQuery);
                                     <?php echo getElementValue("ravnatelj", $drustvo); ?>
                                 </td>
                                 <td> <!-- Working hours -->
-                                    Radni dan: <?php echo getOpenHours(true, $drustvo); ?><br/>
+                                    Radni dan: <?php echo getOpenHours(true, $drustvo); ?>
                                     Subota: <?php echo getOpenHours(false, $drustvo); ?>
                                 </td>
                                 <td> <!-- Address -->
