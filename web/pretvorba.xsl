@@ -50,7 +50,7 @@
 								</tr>
 							</table>
 						</div>
-						<div class="tbl-content" style="height:50%; margin-bottom:60px;">
+						<div class="tbl-content" style="max-height:50%; margin-bottom:60px;">
 							<table>
 								<xsl:for-each select="/drustva/drustvo">
 									<tr>

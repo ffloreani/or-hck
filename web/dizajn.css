@@ -215,7 +215,7 @@ section:last-child {
 }
 
 .tbl-content {
-  height: 300px;
+  max-height: 300px;
   margin: 0 30px;
   overflow-x: auto;
   border: 1px solid #444;
@@ -407,23 +407,39 @@ section:last-child {
 
 .btn-submit {
   font-size: 15px;
-  border-color: #10B89C;
-  color: #10B89C;
+  border-color: #20C8AC;
+  color: #20C8AC;
+  transition: all 0.2s ease 0s;
 }
 
 .btn-submit:hover {
-  background: #10B89C;
+  background: #20C8AC;
+  border-color: #20C8AC;
   color: #fff; 
+}
+
+.btn-submit:active {
+  border-color: #00886C;
+  background: #10988C;
+  color: #fff;
 }
 
 .btn-reset {
   font-size: 15px;
-  border-color: #BE2033;
-  color: #BE2033;
+  border-color: #CE3043;
+  color: #CE3043;
+  transition: all 0.2s ease 0s;
 }
 
 .btn-reset:hover {
+  background: #CE3043;
+  border-color: #CE3043;
+  color: #fff;
+}
+
+.btn-reset:active {
   background: #BE2033;
+  border-color: #8E0003;
   color: #fff;
 }
 /*---------------- FOOTER ---------------*/

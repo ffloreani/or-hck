@@ -38,9 +38,10 @@
                 <tr>
                   <td class="desc">Vrsta društva</td>
                   <td>
-                    <input type="checkbox" name="branch-type[]" id="city-county" value="city-county"> Gradsko/Općinsko
-                    <input type="checkbox" name="branch-type[]" id="state" value="state"> Županijsko
-                    <input type="checkbox" name="branch-type[]" id="national" value="national"> Nacionalno
+                    <input type="checkbox" name="branch-type[]" id="opcinsko" value="opcinsko"> Općinsko
+                    <input type="checkbox" name="branch-type[]" id="gradsko" value="gradsko"> Gradsko
+                    <input type="checkbox" name="branch-type[]" id="zupanijsko" value="zupanijsko"> Županijsko
+                    <input type="checkbox" name="branch-type[]" id="nacionalno" value="nacionalno"> Nacionalno
                   </td>
                 </tr>
                 <tr>
@@ -59,31 +60,36 @@
                   <td class="desc">Aktivnosti</td>
                   <td>
                     <select multiple name="activities[]">
-                      <option value="tracing">Služba traženja</option>
-                      <option value="first-aid">Prva pomoć</option>
-                      <option value="addiction">Prevencija ovisnosti</option>
-                      <option value="lifeguards">Spašavanje života na vodi</option>
-                      <option value="eru">Interventni tim</option>
-                      <option value="std">Prevencija spolno prenosivih bolesti</option>
-                      <option value="assistance">Pomoć u kući</option>
-                      <option value="youth">Klub mladih</option>
-                      <option value="blood-drive">Dobrovoljno davalaštvo krvi</option>
-                      <option value="trafficking">Prevencija trgovanja ljudima</option>
+                      <option value="djelovanje u katastrofama">Djelovanje u katastrofama</option>
+                      <option value="dobrovoljno davalaštvo krvi">Dobrovoljno davalaštvo krvi</option>
+                      <option value="interventni tim">Interventni tim</option>
+                      <option value="klub mladih">Klub mladih</option>
+                      <option value="pomoć u kući">Pomoć u kući</option>
+                      <option value="prevencija bolesti ovisnosti">Prevencija bolesti ovisnosti</option>
+                      <option value="prevencija trgovanja ljudima">Prevencija trgovanja ljudima</option>
+                      <option value="prevencija ovisnosti">Prevencija ovisnosti</option>
+                      <option value="prevencija spolno prenosivih bolesti">Prevencija spolno prenosivih bolesti</option>
+                      <option value="prva pomoć">Prva pomoć</option>
+                      <option value="pučka kuhinja">Pučka kuhinja</option>
+                      <option value="služba traženja">Služba traženja</option>
+                      <option value="socijalni dućan">Socijalni dućan</option>
+                      <option value="spašavanje života na vodi i ekološke zaštite priobalja">Spašavanje života na vodi i ekološke zaštite priobalja</option>
+                      <option value="zdravstveni programi i savjetovališta">Zdravstveni programi i savjetovališta</option>
                     </select>
                   </td>
                 </tr>
                 <tr>
                   <td class="desc">Tip telefona</td>
                   <td>
-                    <input type="radio" name="phone-type" id="landline" value="0"> Fiksni
-                    <input type="radio" name="phone-type" id="cell" value="1"> Mobilni
-                    <input type="radio" name="phone-type" id="fax" value="2"> Telefax
+                    <input type="radio" name="phone-type" id="fiksni" value="fiksni" checked> Fiksni
+                    <input type="radio" name="phone-type" id="mobilni" value="mobilni"> Mobilni
+                    <input type="radio" name="phone-type" id="telefax" value="telefax"> Telefax
                   </td>
                 </tr>
                 <tr>
                   <td class="desc">Broj telefona</td>
                   <td>
-                      <input type="tel" name="phone-number" value="+385">
+                      <input type="tel" name="phone-number">
                   </td>
                 </tr>
               </table>

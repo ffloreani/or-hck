@@ -8,7 +8,14 @@ $xmlDom->load( 'podaci.xml' );
 
 $xPath = new DOMXPath($xmlDom);
 
-$xmlQuery = constructXPathFilter($_GET['branch-type'], $_GET['director'], $_GET['town'], $_GET['activities'], $_GET['phone-type'], $_GET['phone-number']);
+$branchType = isset($_GET['branch-type']) ? $_GET['branch-type'] : "";
+$director = isset($_GET['director']) ? $_GET['director'] : "";
+$town = isset($_GET['town']) ? $_GET['town'] : "";
+$activities = isset($_GET['activities']) ? $_GET['activities'] : "";
+$phoneType = isset($_GET['phone-type']) ? $_GET['phone-type'] : "";
+$phoneNumber = isset($_GET['phone-number']) ? $_GET['phone-number'] : "";
+
+$xmlQuery = constructXPathFilter($branchType, $director, $town, $activities, $phoneType, $phoneNumber);
 
 $filteredNodes = $xPath->query($xmlQuery);
 ?>
@@ -46,7 +53,7 @@ $filteredNodes = $xPath->query($xmlQuery);
 
         <div class="main">
             <div class="branches xml-branches">
-                <h1 class="headline">Podaci o društvima</h1>
+                <h1 class="headline">Rezultati pretrage</h1>
                 <div class="tbl-header">
                     <table>
                         <tr>
@@ -59,7 +66,7 @@ $filteredNodes = $xPath->query($xmlQuery);
                         </tr>
                     </table>
                 </div>
-                <div class="tbl-content" style="height:50%; margin-bottom:60px;">
+                <div class="tbl-content" style="max-height:50%; margin-bottom:60px;">
                     <table>
                         <?php foreach($filteredNodes as $drustvo) { ?>
                             <tr>
@@ -70,14 +77,18 @@ $filteredNodes = $xPath->query($xmlQuery);
                                     <?php echo getElementValue("ravnatelj", $drustvo); ?>
                                 </td>
                                 <td> <!-- Working hours -->
-                                    Radni dan: <?php echo getOpenHours(true, $drustvo); ?>
+                                    Radni dan: <?php echo getOpenHours(true, $drustvo); ?><br/>
                                     Subota: <?php echo getOpenHours(false, $drustvo); ?>
                                 </td>
                                 <td> <!-- Address -->
                                     <?php echo getAddress($drustvo); ?>
                                 </td>
-                                <td style="text-align:center;"> <!-- Web link -->
-                                    
+                                <td style="text-align: center;"> <!-- Web link -->
+                                    <?php if (containsElement("web", $drustvo) == true) { ?>
+                                      <a class="links" href=<?php echo getElementValue("web", $drustvo); ?> target="_blank">
+                                        <i class="fa fa-lg fa-external-link"></i>
+                                      </a>
+                                    <?php } else { } ?>
                                 </td>
                                 <td style="text-align:center;"> <!-- Facebook link -->
                                     <a class="links" href=<?php echo getFacebookLink($drustvo); ?> target="_blank">
