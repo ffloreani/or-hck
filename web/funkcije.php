@@ -39,14 +39,14 @@ function constructBranchTypeFilter($branchTypes) {
 function constructDirectorFilter($director) {
   $lcText = textToLowercase();
   $director = strtolower($director);
-  return "[ravnatelj[contains($lcText, '$director')]]";
+  return "[ravnatelj[starts-with($lcText, '$director')]]";
 }
 
 // Constructs the XPath filter for the town of a branch 
 function constructTownFilter($town) {
   $lcText = textToLowercase();
   $town = strtolower($town);
-  return "[adresa/mjesto[contains($lcText, '$town')]]";
+  return "[adresa/mjesto[starts-with($lcText, '$town')]]";
 }
 
 // Constructs the XPath filter for branch activities, linking them with OR operators
