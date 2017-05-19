@@ -61,6 +61,7 @@ $filteredNodes = $xPath->query($xmlQuery);
                             <th>Ravnatelj/ica</th>
                             <th>Radno vrijeme</th>
                             <th>Adresa</th>
+                            <th>Koordinate</th>
                             <th style="text-align:center;">Web</th>
                             <th style="text-align:center;">Facebook</th>
                         </tr>
@@ -82,6 +83,9 @@ $filteredNodes = $xPath->query($xmlQuery);
                                 </td>
                                 <td> <!-- Address -->
                                     <?php echo getAddress($drustvo); ?>
+                                </td>
+                                <td>
+                                	<?php echo getCoordinates($drustvo); ?>
                                 </td>
                                 <td style="text-align: center;"> <!-- Web link -->
                                     <?php if (containsElement("web", $drustvo) == true) { ?>

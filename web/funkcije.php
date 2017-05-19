@@ -110,6 +110,19 @@ function getAddress($drustvo) {
   return implode(' ', array($ulica, $kucniBroj)) . ", " . implode(' ', array($mjesto, $postBroj));
 }
 
+// Returns the geographic coordinates of the given branch office
+function getCoordinates($drustvo) {
+  $ulica = getElementValue("ulica", $drustvo);
+  $kucniBroj = getElementValue("kucni-broj", $drustvo);
+  $mjesto = getElementValue("mjesto", $drustvo);
+  
+  $address = implode('+', array($kucniBroj, $ulica)) . ',' . $mjesto . ',Croatia';
+  $baseUrl = 'http://nominatim.openstreetmaps.org/search?q=' . $address . '&format=json&addressdetails=1&limit=1' 
+  
+  $nominatimData = file_get_contents($baseUrl);
+  return $nominatimData;
+}
+
 // If the isWorkweek = true, returns the business hours for weekdays. If isWorkweek = false, returns business hours for saturdays, otherwise returns "Ne radi"
 function getOpenHours($isWorkweek, $drustvo) {
   if ($isWorkweek === true) {
