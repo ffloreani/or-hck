@@ -100,27 +100,54 @@ function getElementValue($elemName, $node) {
   return $node->getElementsByTagName($elemName)[0]->nodeValue;
 }
 
-// Returns the full address in the format "street name and number, town postal_code"
-function getAddress($drustvo) {
-  $ulica = getElementValue("ulica", $drustvo);
-  $kucniBroj = getElementValue("kucni-broj", $drustvo);
-  $mjesto = getElementValue("mjesto", $drustvo);
-  $postBroj = $drustvo->getAttribute("post-broj");
+function getFBJsonForField($drustvo, $field) {
+  $fbId = getElementValue("fb-id", $drustvo);
   
-  return implode(' ', array($ulica, $kucniBroj)) . ", " . implode(' ', array($mjesto, $postBroj));
+  $url = "https://graph.facebook.com/v2.9/" . $fbId . "?fields=" . $field . "&access_token=1429523727086972%7CiHZEBTo_TdvVonn5OvU_nEtkH6g";
+  
+  $data = file_get_contents($url);
+  $json = json_decode($data, true);
+  
+  return $json;
+}
+
+function getFBPictureUrl($drustvo) {
+  $graphJson = getFBJsonForField($drustvo, 'picture');
+
+  $pictureUrl = $graphJson['picture']['data']['url'];
+  
+  return $pictureUrl;
+}
+
+function getFBAddress($drustvo) {
+  $graphJson = getFBJsonForField($drustvo, 'location');
+  
+  $street = $graphJson['location']['street'];
+  $city = $graphJson['location']['city'];
+  
+  if (!empty($street)) {
+    return $street . ', ' . $city;    
+  } else {
+    return $city;
+  }
 }
 
 // Returns the geographic coordinates of the given branch office
 function getCoordinates($drustvo) {
-  $ulica = getElementValue("ulica", $drustvo);
-  $kucniBroj = getElementValue("kucni-broj", $drustvo);
-  $mjesto = getElementValue("mjesto", $drustvo);
-  
-  $address = implode('+', array($kucniBroj, $ulica)) . ',' . $mjesto . ',Croatia';
-  $baseUrl = 'http://nominatim.openstreetmaps.org/search?q=' . $address . '&format=json&addressdetails=1&limit=1' 
+  $address = str_replace(' ', '+', getFBAddress($drustvo));
+  $baseUrl = 'https://nominatim.openstreetmaps.org/search?q=' . $address . '&format=xml&addressdetails=1&limit=1';
   
   $nominatimData = file_get_contents($baseUrl);
-  return $nominatimData;
+  $nominatimXml = simplexml_load_string($nominatimData);
+  
+  $lat = $nominatimXml->place[0]['lat'];
+  $lon = $nominatimXml->place[0]['lon'];
+  
+  if (empty($lat) || empty($lon)) {
+    return '';
+  } else {
+    return $lat . '&deg;' . ' N ' . $lon . '&deg;' . ' E';
+  }
 }
 
 // If the isWorkweek = true, returns the business hours for weekdays. If isWorkweek = false, returns business hours for saturdays, otherwise returns "Ne radi"
@@ -136,6 +163,14 @@ function getOpenHours($isWorkweek, $drustvo) {
       return "Ne radi";
     }
   }
+}
+
+function getWebsiteFromFB($drustvo) {
+  $graphJson = getFBJsonForField($drustvo, 'website');
+  
+  $websiteUrl = $graphJson['website'];
+  
+  return $websiteUrl;
 }
 
 // Returns the full URL to the branch's Facebook page

@@ -56,22 +56,28 @@ $filteredNodes = $xPath->query($xmlQuery);
                 <h1 class="headline">Rezultati pretrage</h1>
                 <div class="tbl-header">
                     <table>
-                        <tr>
-                            <th>Naziv</th>
-                            <th>Ravnatelj/ica</th>
-                            <th>Radno vrijeme</th>
-                            <th>Adresa</th>
-                            <th>Koordinate</th>
-                            <th style="text-align:center;">Web</th>
-                            <th style="text-align:center;">Facebook</th>
-                        </tr>
+						<col span="1" class="column-narrow">
+							<tr>
+								<th style="text-align:center;"></th>
+								<th>Društvo</th>
+								<th>Ravnatelj</th>
+								<th>Radno vrijeme</th>
+								<th>Adresa</th>
+								<th>Koordinate</th>
+								<th style="text-align:center;">Web</th>
+								<th style="text-align:center;">Facebook</th>
+							</tr>
                     </table>
                 </div>
                 <div class="tbl-content" style="max-height:50%; margin-bottom:60px;">
                     <table>
-                        <?php foreach($filteredNodes as $drustvo) { ?>
+                        <col span="1" class="column-narrow">
+						<?php foreach($filteredNodes as $drustvo) { ?>
                             <tr>
-                                <td> <!-- Branch title -->
+                                <td style="text-align:center;"> <!-- Branch profile picture -->
+									<img src=<?php echo getFBPictureUrl($drustvo); ?> height="50px" width="50px" alt=""/>
+								</td>
+                             	<td> <!-- Branch title -->
                                     <?php echo getElementValue("naziv", $drustvo); ?>
                                 </td>
                                 <td> <!-- Branch director -->
@@ -82,17 +88,18 @@ $filteredNodes = $xPath->query($xmlQuery);
                                     Subota: <?php echo getOpenHours(false, $drustvo); ?>
                                 </td>
                                 <td> <!-- Address -->
-                                    <?php echo getAddress($drustvo); ?>
+                                    <?php echo getFBAddress($drustvo); ?>
                                 </td>
                                 <td>
                                 	<?php echo getCoordinates($drustvo); ?>
                                 </td>
                                 <td style="text-align: center;"> <!-- Web link -->
-                                    <?php if (containsElement("web", $drustvo) == true) { ?>
-                                      <a class="links" href=<?php echo getElementValue("web", $drustvo); ?> target="_blank">
-                                        <i class="fa fa-lg fa-external-link"></i>
-                                      </a>
-                                    <?php } else { } ?>
+                                    <?php 
+										$website = getWebsiteFromFB($drustvo);
+										if (!empty($website)) { 
+											echo '<a class="links" href=' . $website . ' target="_blank"><i class="fa fa-lg fa-external-link"></i></a>';
+										} else { }
+									?>
                                 </td>
                                 <td style="text-align:center;"> <!-- Facebook link -->
                                     <a class="links" href=<?php echo getFacebookLink($drustvo); ?> target="_blank">

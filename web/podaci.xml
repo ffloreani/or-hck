@@ -53,7 +53,7 @@
 			<broj pozivni-broj="031">740750</broj>
 		</telefon>
 		<adresa>
-			<ulica>Sv. Ivana Krstitelja</ulica>
+			<ulica>Svetog Ivana Krstitelja</ulica>
 			<kucni-broj>116a</kucni-broj>
 			<mjesto post-broj="31326">Darda</mjesto>
 		</adresa>
@@ -104,32 +104,6 @@
 			<aktivnost>Pomoć u kući</aktivnost>
 		</aktivnosti>
 		<fb-id>411280762363895</fb-id>
-	</drustvo>
-
-	<drustvo vrsta="opcinsko">
-		<naziv>Općinsko društvo Crvenog križa Vojnić</naziv>
-		<ravnatelj>Ljuba Martinović</ravnatelj>
-		<telefon tip="fiksni">
-			<broj pozivni-broj="047">883010</broj>
-		</telefon>
-		<telefon tip="telefax">
-			<broj pozivni-broj="047">883010</broj>
-		</telefon>
-		<adresa>
-			<ulica>Kralja P. Krešimira IV.</ulica>
-			<kucni-broj>18</kucni-broj>
-			<mjesto post-broj="47220">Vojnić</mjesto>
-		</adresa>
-		<e-mail>crveni-kriz-vojnic@ka.t-com.hr</e-mail>
-		<radno-vrijeme>
-			<radni-dan od="08" do="13"/>
-		</radno-vrijeme>
-		<aktivnosti>
-			<aktivnost>Dobrovoljno darivanje krvi</aktivnost>
-			<aktivnost>Prva pomoć</aktivnost>
-			<aktivnost>Pomoć u kući</aktivnost>
-		</aktivnosti>
-		<fb-id>1030164107065213</fb-id>
 	</drustvo>
 
 	<drustvo vrsta="gradsko">
@@ -232,7 +206,7 @@
 			<broj pozivni-broj="01">3876062</broj>
 		</telefon>
 		<adresa>
-			<ulica>Vulinčeva</ulica>
+			<ulica>Alojza Vulinca</ulica>
 			<kucni-broj>30</kucni-broj>
 			<mjesto post-broj="10310">Ivanić Grad</mjesto>
 		</adresa>
@@ -259,7 +233,7 @@
 			<broj pozivni-broj="01">2883002</broj>
 		</telefon>
 		<adresa>
-			<ulica>Vulinčeva</ulica>
+			<ulica>Alojza Vulinca</ulica>
 			<kucni-broj>30</kucni-broj>
 			<mjesto post-broj="10310">Ivanić Grad</mjesto>
 		</adresa>
@@ -284,31 +258,6 @@
 			<aktivnost>Prevencija spolno prenosivih bolesti</aktivnost>
 		</aktivnosti>
 		<fb-id>562111867280895</fb-id>
-	</drustvo>
-  
-    <drustvo vrsta="zupanijsko">
-		<naziv>Društvo Crvenog križa Splitsko-dalmatinske županije</naziv>
-		<ravnatelj>Željko Grubišić</ravnatelj>
-		<telefon tip="fiksni">
-			<broj pozivni-broj="021">244411</broj>
-		</telefon>
-		<telefon tip="fiksni">
-			<broj pozivni-broj="021">244211</broj>
-		</telefon>
-		<adresa>
-			<ulica>Petra Krešimira IV.</ulica>
-			<kucni-broj>31a</kucni-broj>
-			<mjesto post-broj="21210">Solin</mjesto>
-		</adresa>
-		<e-mail>crveni.kriz.solin@st.t-com.hr</e-mail>
-		<radno-vrijeme>
-			<radni-dan od="08" do="14"/>
-		</radno-vrijeme>
-		<aktivnosti>
-			<aktivnost>Dobrovoljno darivanje krvi</aktivnost>
-			<aktivnost>Služba traženja</aktivnost>
-		</aktivnosti>
-		<fb-id>296861743813855</fb-id>
 	</drustvo>
   
     <drustvo vrsta="gradsko">

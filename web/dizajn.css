@@ -206,6 +206,10 @@ section:last-child {
   background: rgba(230,0,26,0.75);
 }
 
+.column-narrow {
+  width: 90px;
+}
+
 .tbl-header th {
   padding: 20px 15px;
   text-align: left;
@@ -222,7 +226,7 @@ section:last-child {
 }
 
 .tbl-content td {
-  padding: 15px;
+  padding: 20px;
   text-align: left;
   vertical-align: middle;
   font-weight: 300;
