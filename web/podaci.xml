@@ -4,7 +4,7 @@
 <?xml-stylesheet type="text/xsl" href="pretvorba.xsl"?>
 
 <drustva>
-    <drustvo vrsta="nacionalno">
+    <drustvo vrsta="nacionalno" sifra="0001">
 		<naziv>Hrvatski Crveni križ</naziv>
 		<ravnatelj>dr. Josip Jelić</ravnatelj>
 		<telefon tip="fiksni">
@@ -39,11 +39,12 @@
 			<aktivnost>Služba spašavanja života na vodi i ekološke zaštite priobalja</aktivnost>
           	<aktivnost>Pučka kuhinja</aktivnost>
 		</aktivnosti>
+		<counter>0</counter>
 		<fb-id>490132147765824</fb-id>
 	</drustvo>
   
   
-	<drustvo vrsta="opcinsko">
+	<drustvo vrsta="opcinsko" sifra="0002">
 		<naziv>Općinsko društvo Crvenog križa Darda</naziv>
 		<ravnatelj>Ivan Hodak</ravnatelj>
 		<telefon tip="fiksni">
@@ -67,10 +68,11 @@
 			<aktivnost>Dobrovoljno darivanje krvi</aktivnost>
 			<aktivnost>Prva pomoć</aktivnost>
 		</aktivnosti>
+		<counter>0</counter>
 		<fb-id>212063432222230</fb-id>
 	</drustvo>
 
-	<drustvo vrsta="gradsko">
+	<drustvo vrsta="gradsko" sifra="0003">
 		<naziv>Gradsko društvo Crvenog kriza Osijek</naziv>
 		<ravnatelj>Denis Ćosić</ravnatelj>
 		<telefon tip="fiksni">
@@ -103,10 +105,11 @@
 			<aktivnost>Prevencija spolno prenosivih bolesti</aktivnost>
 			<aktivnost>Pomoć u kući</aktivnost>
 		</aktivnosti>
+		<counter>0</counter>
 		<fb-id>411280762363895</fb-id>
 	</drustvo>
 
-	<drustvo vrsta="gradsko">
+	<drustvo vrsta="gradsko" sifra="0004">
 		<naziv>Gradsko društvo Crvenog križa Zagreb</naziv>
 		<ravnatelj>Petar Penava</ravnatelj>
 		<telefon tip="fiksni">
@@ -141,10 +144,11 @@
 			<aktivnost>Prevencija spolno prenosivih bolesti</aktivnost>
 			<aktivnost>Služba spašavanja života na vodi i ekološke zaštite priobalja</aktivnost>
 		</aktivnosti>
+		<counter>0</counter>
 		<fb-id>211247559299296</fb-id>
 	</drustvo>
 
-	<drustvo vrsta="zupanijsko">
+	<drustvo vrsta="zupanijsko" sifra="0005">
 		<naziv>Društvo Crvenog križa Istarske županije</naziv>
 		<ravnatelj>Elza Damijanić</ravnatelj>
 		<telefon tip="fiksni">
@@ -166,10 +170,11 @@
 			<aktivnost>Interventni tim</aktivnost>
 			<aktivnost>Služba traženja</aktivnost>
 		</aktivnosti>
+		<counter>0</counter>
 		<fb-id>545520178925532</fb-id>
 	</drustvo>
   
-    <drustvo vrsta="gradsko">
+    <drustvo vrsta="gradsko" sifra="0006">
         <naziv>Gradsko društvo Crvenog križa Bjelovar</naziv>
         <ravnatelj>Ratimir Blažeković</ravnatelj>
         <telefon tip="fiksni">
@@ -193,10 +198,11 @@
             <aktivnost>Prva pomoć</aktivnost>
             <aktivnost>Zdravstveni programi i savjetovališta</aktivnost>
         </aktivnosti>
-        <fb-id>1241604025885518</fb-id>
+        <counter>0</counter>
+		<fb-id>1241604025885518</fb-id>
     </drustvo>
   
-    <drustvo vrsta="zupanijsko">
+    <drustvo vrsta="zupanijsko" sifra="0007">
 		<naziv>Društvo Crvenog križa Zagrebačke županije</naziv>
 		<ravnatelj>Andrea-Silvija Hotujec</ravnatelj>
 		<telefon tip="fiksni">
@@ -220,10 +226,11 @@
 			<aktivnost>Služba traženja</aktivnost>
 		    <aktivnost>Prva pomoć</aktivnost>
         </aktivnosti>
+		<counter>0</counter>
 		<fb-id>586762021484255</fb-id>
 	</drustvo>
   
-    <drustvo vrsta="gradsko">
+    <drustvo vrsta="gradsko" sifra="0008">
 		<naziv>Gradsko društvo Crvenog križa Ivanić Grad</naziv>
 		<ravnatelj>Ivana Bajt</ravnatelj>
 		<telefon tip="fiksni">
@@ -257,10 +264,11 @@
 			<aktivnost>Prevencija bolesti ovisnosti</aktivnost>
 			<aktivnost>Prevencija spolno prenosivih bolesti</aktivnost>
 		</aktivnosti>
+		<counter>0</counter>
 		<fb-id>562111867280895</fb-id>
 	</drustvo>
   
-    <drustvo vrsta="gradsko">
+    <drustvo vrsta="gradsko" sifra="0009">
 		<naziv>Gradsko društvo Crvenog križa Dubrovnik</naziv>
 		<ravnatelj>Živko Šimunović</ravnatelj>
 		<telefon tip="fiksni">
@@ -294,6 +302,7 @@
 			<aktivnost>Prevencija bolesti ovisnosti</aktivnost>
 			<aktivnost>Prevencija spolno prenosivih bolesti</aktivnost>
 		</aktivnosti>
+		<counter>0</counter>
 		<fb-id>487094757993495</fb-id>
 	</drustvo>
   

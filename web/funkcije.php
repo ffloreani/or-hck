@@ -10,7 +10,6 @@ function constructXPathFilter($branchTypes, $director, $town, $activities, $phon
   $phoneFilter = isset($phoneType) && isNotEmpty($phoneNumber) ? constructPhoneFilter($phoneType, $phoneNumber) : "";
   
   $query = implode('', array($allBranchesFilter, $branchTypeFilter, $directorFilter, $townFilter, $activitiesFilter, $phoneFilter));
-  echo $query;
   return $query;
 }
 
@@ -100,6 +99,10 @@ function getElementValue($elemName, $node) {
   return $node->getElementsByTagName($elemName)[0]->nodeValue;
 }
 
+function getAttribute($attrName, $node) {
+  return $node->getAttribute($attrName);
+}
+
 function getFBJsonForField($drustvo, $field) {
   $fbId = getElementValue("fb-id", $drustvo);
   
@@ -119,6 +122,15 @@ function getFBPictureUrl($drustvo) {
   return $pictureUrl;
 }
 
+function getAddress($drustvo) {
+  $ulica = getElementValue("ulica", $drustvo);
+  $kucniBroj = getElementValue("kucni-broj", $drustvo);
+  $mjesto = getElementValue("mjesto", $drustvo);
+  $postBroj = $drustvo->getAttribute("post-broj");
+   		   
+  return implode(' ', array($ulica, $kucniBroj)) . ", " . implode(' ', array($mjesto, $postBroj));	
+}
+
 function getFBAddress($drustvo) {
   $graphJson = getFBJsonForField($drustvo, 'location');
   
@@ -133,7 +145,7 @@ function getFBAddress($drustvo) {
 }
 
 // Returns the geographic coordinates of the given branch office
-function getCoordinates($drustvo) {
+function getCoordinatesByFullAddress($drustvo) {
   $address = str_replace(' ', '+', getFBAddress($drustvo));
   $baseUrl = 'https://nominatim.openstreetmaps.org/search?q=' . $address . '&format=xml&addressdetails=1&limit=1';
   
@@ -144,7 +156,58 @@ function getCoordinates($drustvo) {
   $lon = $nominatimXml->place[0]['lon'];
   
   if (empty($lat) || empty($lon)) {
-    return '';
+	return getCoordinatesByCity($address);
+  } else {
+    return $lat . '&deg;' . ' N ' . $lon . '&deg;' . ' E';
+  }
+}
+
+function getFullCoorsArray($drustvo) {
+  $address = str_replace(' ', '+', getFBAddress($drustvo));
+  $baseUrl = 'https://nominatim.openstreetmaps.org/search?q=' . $address . '&format=xml&addressdetails=1&limit=1';
+  
+  $nominatimData = file_get_contents($baseUrl);
+  $nominatimXml = simplexml_load_string($nominatimData);
+  
+  $lat = $nominatimXml->place[0]['lat'];
+  $lon = $nominatimXml->place[0]['lon'];
+  
+  if (empty($lat) || empty($lon)) {
+	return getCoordinatesByCity($address);
+  } else {
+    return array($lat, $lon);
+  }
+}
+
+function getCityCoorsArray($address) {
+  $address = substr($address, strpos($address, ','));
+  $baseUrl = 'https://nominatim.openstreetmaps.org/search?q=' . $address . '&format=xml&addressdetails=1&limit=1';
+  
+  $nominatimData = file_get_contents($baseUrl);
+  $nominatimXml = simplexml_load_string($nominatimData);
+  
+  $lat = $nominatimXml->place[0]['lat'];
+  $lon = $nominatimXml->place[0]['lon'];
+  
+  if (empty($lat) || empty($lon)) {
+	return array();
+  } else {
+    return array($lat, $lon);
+  }
+}
+
+function getCoordinatesByCity($address) {
+  $address = substr($address, strpos($address, ','));
+  $baseUrl = 'https://nominatim.openstreetmaps.org/search?q=' . $address . '&format=xml&addressdetails=1&limit=1';
+  
+  $nominatimData = file_get_contents($baseUrl);
+  $nominatimXml = simplexml_load_string($nominatimData);
+  
+  $lat = $nominatimXml->place[0]['lat'];
+  $lon = $nominatimXml->place[0]['lon'];
+  
+  if (empty($lat) || empty($lon)) {
+	return '';
   } else {
     return $lat . '&deg;' . ' N ' . $lon . '&deg;' . ' E';
   }
@@ -176,6 +239,20 @@ function getWebsiteFromFB($drustvo) {
 // Returns the full URL to the branch's Facebook page
 function getFacebookLink($drustvo) {
   return "https://facebook.com/" . getElementValue("fb-id", $drustvo);
+}
+
+function getLocation($quake) {
+  return $quake["properties"]["place"];
+}
+
+function getMagnitude($quake) {
+  return $quake["properties"]["mag"];
+}
+
+function getTime($quake) {
+  $timestamp = $quake["properties"]["time"];
+  $timestampsec = substr($timestamp, 0, -3);
+  return date("l jS \of F Y h:i:s A", $timestampsec);
 }
 
 ?>
